@@ -68,7 +68,7 @@ constexpr std::size_t Fold_()
                      // is unusable.
                      result_tbl.size() >= coins[sizeof...(p)]
                        ? result_tbl[result_tbl.size() - coins[sizeof...(p)]] + 1
-                       : std::numeric_limits<std::size_t>::max() > ();
+                       : std::numeric_limits<std::size_t>::max()>();
 
     // clang-format on
 }
