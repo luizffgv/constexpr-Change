@@ -5,16 +5,8 @@
 
 int main()
 {
-    // I believe the limit is implementation dependent. You might be able to
-    //  change it using compiler args.
-    constexpr int                value_as_cents{239};
-    constexpr std::array<int, 4> coins{1, 5, 10, 25};
+    constexpr int        value_as_cents{239};
+    constexpr std::array coins{1, 5, 10, 25};
 
-    std::cout << Change<int,            // Type of the value
-                        value_as_cents, // Value
-                        coins.size(),   // Number of different coins
-                        coins,          // Coins
-                        0               // This should always be zero
-                        >()
-              << std::endl;
+    std::cout << Change<value_as_cents, coins>() << std::endl;
 }
