@@ -17,7 +17,7 @@ This requires C++20 and was tested with clang and g++ using `-Wpedantic`.
 constexpr int        value_as_cents{239};
 constexpr std::array coins{1, 5, 10, 25};
 
-std::cout << Change<value_as_cents, coins>() << std::endl;
+std::cout << Change(value_as_cents, coins) << std::endl;
 ```
 
 ### Output
